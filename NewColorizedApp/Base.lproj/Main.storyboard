@@ -124,12 +124,21 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.05000000074505806" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-4W-npg">
                                                 <rect key="frame" x="-2" y="0.0" width="199" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="T8R-Qx-GHl" eventType="valueChanged" id="k66-Ul-FCq"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.26600000262260437" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zzn-CC-Neu">
                                                 <rect key="frame" x="-2" y="42" width="199" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="T8R-Qx-GHl" eventType="valueChanged" id="lX7-YW-cCG"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.49399998784065247" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dfS-dd-CXH">
                                                 <rect key="frame" x="-2" y="84" width="199" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSlider:" destination="T8R-Qx-GHl" eventType="valueChanged" id="wHj-Fb-k7D"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -167,6 +176,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="T8R-Qx-GHl" eventType="touchUpInside" id="su5-B4-UXf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3yv-tL-wqN"/>
@@ -182,6 +194,17 @@
                             <constraint firstItem="aym-6A-s8r" firstAttribute="top" secondItem="3yv-tL-wqN" secondAttribute="top" constant="34" id="qw9-kI-Fpz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="z2n-VQ-sw6" id="4Up-sK-fYS"/>
+                        <outlet property="blueSlider" destination="dfS-dd-CXH" id="8iW-ni-saN"/>
+                        <outlet property="colorView" destination="aym-6A-s8r" id="hBh-pw-hYE"/>
+                        <outlet property="greenLabel" destination="OlF-Ro-Jr5" id="PUL-oi-w72"/>
+                        <outlet property="greenSlider" destination="Zzn-CC-Neu" id="xYO-1S-nUj"/>
+                        <outlet property="greenTextField" destination="D4S-nZ-QkZ" id="8a7-YB-fo5"/>
+                        <outlet property="redLabel" destination="CPE-Bl-IgN" id="bqQ-8H-tzy"/>
+                        <outlet property="redSlider" destination="8ce-4W-npg" id="RT5-L7-Eb4"/>
+                        <outlet property="redTextField" destination="l11-SZ-I3P" id="Fee-xR-a0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Cl-3g-TGQ" sceneMemberID="firstResponder"/>
             </objects>
